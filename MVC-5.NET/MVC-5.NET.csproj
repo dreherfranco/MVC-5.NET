@@ -175,8 +175,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202209082032357_Initial.cs" />
+    <Compile Include="Migrations\202209082032357_Initial.designer.cs">
+      <DependentUpon>202209082032357_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202209082225354_addresses.cs" />
+    <Compile Include="Migrations\202209082225354_addresses.designer.cs">
+      <DependentUpon>202209082225354_addresses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\DbModels\Address.cs" />
     <Compile Include="Models\ViewModels\Account\AccountViewModels.cs" />
     <Compile Include="Models\DbModels\ApplicationUser.cs" />
+    <Compile Include="Models\ViewModels\Address\AddressCreateViewModel.cs" />
     <Compile Include="Models\ViewModels\Manage\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -354,6 +365,14 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202209082032357_Initial.resx">
+      <DependentUpon>202209082032357_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209082225354_addresses.resx">
+      <DependentUpon>202209082225354_addresses.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using MVC_5.NET.Models.ViewModels.Address;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace MVC_5.NET.Models
@@ -79,6 +80,8 @@ namespace MVC_5.NET.Models
         [Display(Name = "Confirmar contraseña")]
         [Compare("Password", ErrorMessage = "La contraseña y la contraseña de confirmación no coinciden.")]
         public string ConfirmPassword { get; set; }
+
+        public AddressCreateViewModel Address { get; set; }
     }
 
     public class ResetPasswordViewModel

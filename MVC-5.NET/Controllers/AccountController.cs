@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using MVC_5.NET.Models;
+using MVC_5.NET.Models.DbModels;
 
 namespace MVC_5.NET.Controllers
 {
@@ -151,7 +152,12 @@ namespace MVC_5.NET.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var address = new Address() {StreetName = model.Address.StreetName, PostalCode = model.Address.PostalCode};
+                var user = new ApplicationUser {
+                    UserName = model.Email, 
+                    Email = model.Email, 
+                    Address = address 
+                };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
