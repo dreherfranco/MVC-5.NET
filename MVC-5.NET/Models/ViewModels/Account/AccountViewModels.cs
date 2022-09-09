@@ -1,4 +1,5 @@
 ﻿using MVC_5.NET.Models.ViewModels.Address;
+using RegisterViewModelResources;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -67,18 +68,18 @@ namespace MVC_5.NET.Models
     {
         [Required]
         [EmailAddress]
-        [Display(Name = "Correo electrónico")]
+        [Display(ResourceType = typeof(RegisterResource), Name = "Email_Display")]
         public string Email { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "El número de caracteres de {0} debe ser al menos {2}.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessageResourceType = typeof(RegisterResource), ErrorMessageResourceName = "Password_StringLength")]
         [DataType(DataType.Password)]
-        [Display(Name = "Contraseña")]
+        [Display(ResourceType = typeof(RegisterResource), Name = "Password_Display")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirmar contraseña")]
-        [Compare("Password", ErrorMessage = "La contraseña y la contraseña de confirmación no coinciden.")]
+        [Display(ResourceType = typeof(RegisterResource), Name = "ConfirmPassword_Display")]
+        [Compare("Password", ErrorMessageResourceType = typeof(RegisterResource), ErrorMessageResourceName = "ConfirmPassword_Compare")]
         public string ConfirmPassword { get; set; }
 
         public AddressCreateViewModel Address { get; set; }

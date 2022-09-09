@@ -190,6 +190,26 @@
     <Compile Include="Models\ViewModels\Address\AddressCreateViewModel.cs" />
     <Compile Include="Models\ViewModels\Manage\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Languages\Address\ViewModels\AddressCreateResource.es.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddressCreateResource.es.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Languages\Address\ViewModels\AddressCreateResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddressCreateResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Languages\User\ViewModels\RegisterResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegisterResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Languages\User\ViewModels\RegisterResource.es.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegisterResource.es.resx</DependentUpon>
+    </Compile>
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -372,6 +392,26 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202209082225354_addresses.resx">
       <DependentUpon>202209082225354_addresses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Languages\Address\ViewModels\AddressCreateResource.es.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AddressCreateResource.es.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>AddressViewModelResources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Languages\Address\ViewModels\AddressCreateResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AddressCreateResource.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>AddressViewModelResources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Languages\User\ViewModels\RegisterResource.es.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>RegisterResource.es.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>RegisterViewModelResources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Languages\User\ViewModels\RegisterResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>RegisterResource.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>RegisterViewModelResources</CustomToolNamespace>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
